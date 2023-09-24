@@ -124,7 +124,18 @@ a {
 }
 
 .active {
+	position: relative;	
 	color: var(--active-color);
+}
+.active::after{
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	content: "";
+	height: 4px;
+	width: 100%;
+	background-color: var(--active-color);
 }
 
 .menu-item:hover,
@@ -273,7 +284,24 @@ align-items: center;
 }
 
 .about-item {
+	position: relative;
+
 	--items: 3;
+}
+.about-item::after{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	content: attr(data-title);
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	height: 70px;
+	background: rgba(47, 48, 58, 0.80);
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
 }
 
 /* 
@@ -343,7 +371,6 @@ align-items: center;
 .social-icon:focus{
 	fill: #fff;
 	background-color: var(--active-color);
-
 }
 
 /* 
