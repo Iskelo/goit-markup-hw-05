@@ -8,6 +8,7 @@
 	--indent: 30px;
 	--items: 1;
 	--slow-anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	--border-color: #eee;
 }
 
 * {
@@ -72,8 +73,9 @@ p {
 	| HEADER 
 	|=============================
 */
+
 .header {
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--border-color);
 	letter-spacing: 0.02em;
 }
 
@@ -129,6 +131,7 @@ a {
 	position: relative;	
 	color: var(--active-color);
 }
+
 .active::after{
 	position: absolute;
 	display: block;
@@ -173,6 +176,7 @@ a {
 	color: var(--active-color);
 	fill: var(--active-color);
 }
+
 .icon-contact{
 	fill: currentColor;
 	margin-right: 10px;
@@ -183,6 +187,7 @@ a {
 	| HERO
 	|=============================
 */
+
 .hero {
 	max-width: 1600px;
 	height: 600px;
@@ -224,11 +229,13 @@ a {
 	font-size: 16px;
 	font-weight: 700;	
 }
+
 /* 
 	|=============================
 	| MODAL
 	|=============================
 */
+
 .backdrop {
 	position: fixed;
 	top: 0;
@@ -261,12 +268,11 @@ a {
 	transform: translate( -50%, -50%) scale(.4);	
 	opacity: 0;
 }
+
 .backdrop .modal-wrapper{
 	transform: translate( -50%, -50%) scale(1);
 	opacity: 1;
 }
-
-
 
 .modal-btn{
 	cursor: pointer;
@@ -284,12 +290,12 @@ a {
 	border: 1px solid rgba(0, 0, 0, 0.10);;
 }
 
-
 /* 
 	|=============================
 	| FEATURES
 	|=============================
 */
+
 .features {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -352,6 +358,7 @@ a {
 
 	--items: 3;
 }
+
 .about-item p{
 	position: absolute;
 	display: flex;
@@ -367,8 +374,6 @@ a {
 	font-size: 14px;
 	text-transform: uppercase;
 }
-
-
 
 /* 
 	|=============================
@@ -416,12 +421,14 @@ a {
 	text-align: center;
 	letter-spacing: 0.03em;
 }
+
 .social-icons{
 	display: flex;
 	gap: 10px;
 	justify-content: center;
 	margin-top: 16px;
 }
+
 .social-icon{
 	display: flex;
 	align-items: center;
@@ -486,7 +493,6 @@ a {
 	border: 1px solid var(--active-color);
 }
 
-
 /* 
 	|=============================
 	| FOOTER
@@ -499,7 +505,6 @@ a {
 	background-color: var(--background-footer);
 	color: #fff;
 }
-
 
 .footer-container>a {
 	margin-bottom: 28px;
@@ -542,6 +547,7 @@ address ul li a:focus {
 	display: flex;
 	align-items: baseline;
 }
+
 .footer-address{
 	margin-right: 70px;
 }
@@ -552,14 +558,17 @@ address ul li a:focus {
 	font-weight: 700;
 	margin-bottom: 20px;
 }
+
 .social-links {
 	display: flex;
 	gap: 10px;	
 }
+
 .footer-icons {
 	display: flex;	
 	justify-content: center;	
 }
+
 .footer-icon {
 	display: flex;
 	align-items: center;
@@ -571,11 +580,11 @@ address ul li a:focus {
 	border-radius: 50%;
 	transition: background-color var(--slow-anim);
 }
+
 .footer-icon:hover,
 .footer-icon:focus{
 	background-color: var(--active-color);
 }
-
 
 /* 
 	|=============================
@@ -651,12 +660,15 @@ address ul li a:focus {
 	letter-spacing: .06em;
 	line-height: 2;
 }
+
 .card{
 	transition: box-shadow var(--slow-anim);
 }
+
 .card:hover, .card:focus{
 	box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
+
 .card-text {
 	color: var(--subtitle-color);
 	letter-spacing: .03em;
@@ -668,9 +680,9 @@ address ul li a:focus {
 	padding-right: 24px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #eee;
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
+	border-bottom: 1px solid var(--border-color);
+	border-left: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
 }
 
 .card-content{
@@ -692,6 +704,7 @@ address ul li a:focus {
 	padding-right: 24px;
 	transition: var(--slow-anim);
 }
+
 .desc-text {
 	color: #fff;
 	font-size: 18px;
