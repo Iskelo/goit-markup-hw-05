@@ -137,6 +137,7 @@ a {
 	height: 4px;
 	width: 100%;
 	background-color: var(--active-color);
+	border-radius: 2px;
 }
 
 .menu-item:hover,
@@ -290,21 +291,23 @@ a {
 
 	--items: 3;
 }
-.about-item::after{
+.about-item p{
 	position: absolute;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	padding-top: 27px;
+	padding-bottom: 27px;
 	content: attr(data-title);
 	width: 100%;
 	left: 0;
-	bottom: 0;
-	height: 70px;
+	bottom: 0;	
 	background: rgba(47, 48, 58, 0.80);
 	color: #fff;
 	font-size: 14px;
 	text-transform: uppercase;
 }
+
+
 
 /* 
 	|=============================
