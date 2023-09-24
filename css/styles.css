@@ -7,6 +7,7 @@
 	--icons: #AFB1B8;
 	--indent: 30px;
 	--items: 1;
+	--slow-anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -121,7 +122,7 @@ a {
 	padding-bottom: 32px;
 	font-weight: 500;
 	font-size: 14px;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--slow-anim);
 }
 
 .active {
@@ -159,7 +160,7 @@ a {
 }
 
 .contact-list a {
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--slow-anim);
 	display: flex;
 	align-items: center;
 	color: currentColor;
@@ -221,7 +222,7 @@ a {
 	border: none;
 	border-radius: 4px;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 700;	
 }
 /* 
 	|=============================
@@ -235,13 +236,14 @@ a {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.20);
-	z-index: 1;
+	z-index: 1;	
 }
 
 .backdrop.is-hidden{
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+		
 }
 
 .modal-wrapper {
@@ -254,7 +256,24 @@ a {
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
 }
+
+.modal-wrapper{	
+	
+}
+
+@keyframes scale-up-center {
+	0% {			
+		transform: scale(0.5);
+	}
+	100% {			
+		transform: scale(1) translate( -50%, -50%);
+	}
+}
+ 
+
+
 .modal-btn{
 	cursor: pointer;
 	position: absolute;
@@ -418,7 +437,7 @@ a {
 	height: 44px;
 	background-color: #fff;
 	border-radius: 50%;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--slow-anim);
 }
 
 .social-icon:hover,
@@ -464,7 +483,7 @@ a {
 	border: 1px solid var(--icons);
 	border-radius: 4px;
 	fill: var(--icons);
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: color var(--slow-anim);
 }
 
 .partners-logo:hover,
@@ -517,7 +536,7 @@ address ul li:last-child {
 address ul li a {
 	opacity: .6;
 	color: #fff;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: opacity var(--slow-anim);
 }
 
 address ul li a:hover,
@@ -556,7 +575,7 @@ address ul li a:focus {
 	height: 44px;
 	background-color: rgba(255, 255, 255, 0.10);
 	border-radius: 50%;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: background-color var(--slow-anim);
 }
 .footer-icon:hover,
 .footer-icon:focus{
@@ -602,7 +621,7 @@ address ul li a:focus {
 	font-family: "Roboto", sans-serif;
 	letter-spacing: 0.03em;
 	font-weight: 500;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: var(--slow-anim);
 }
 
 .btn:last-child {
@@ -639,7 +658,7 @@ address ul li a:focus {
 	line-height: 2;
 }
 .card{
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: box-shadow var(--slow-anim);
 }
 .card:hover, .card:focus{
 	box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
@@ -677,7 +696,7 @@ address ul li a:focus {
 	height: 294px;
 	padding-left: 24px;
 	padding-right: 24px;
-	transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: var(--slow-anim);
 }
 .desc-text {
 	color: #fff;
