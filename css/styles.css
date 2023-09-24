@@ -242,36 +242,30 @@ a {
 .backdrop.is-hidden{
 	opacity: 0;
 	visibility: hidden;
-	pointer-events: none;
-		
+	pointer-events: none;	
 }
 
 .modal-wrapper {
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	transform: translate( -50%, -50%);
+	left: 50%;	
 	width: 528px;
 	height: 581px;
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+	transition: transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s;		
 }
 
-.modal-wrapper{	
-	
+.backdrop.is-hidden .modal-wrapper{
+	transform: translate( -50%, -50%) scale(.4);	
+	opacity: 0;
+}
+.backdrop .modal-wrapper{
+	transform: translate( -50%, -50%) scale(1);
+	opacity: 1;
 }
 
-@keyframes scale-up-center {
-	0% {			
-		transform: scale(0.5);
-	}
-	100% {			
-		transform: scale(1) translate( -50%, -50%);
-	}
-}
- 
 
 
 .modal-btn{
