@@ -7,7 +7,7 @@
 	--icons: #AFB1B8;
 	--indent: 30px;
 	--items: 1;
-	--slow-anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	--slow-anim: 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 	--border-color: #eee;
 }
 
@@ -213,7 +213,6 @@ a {
 	font-size: 44px;
 	font-weight: 900;
 	line-height: 1.36;
-
 }
 
 .hero-btn {
@@ -261,17 +260,12 @@ a {
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-	transition: transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s;		
+	transition: transform .3s ease-in-out .2s, opacity .3s ease-in-out .2s;
+	transform: translate( -50%, -50%) scale(1);		
 }
 
 .backdrop.is-hidden .modal-wrapper{
-	transform: translate( -50%, -50%) scale(.4);	
-	opacity: 0;
-}
-
-.backdrop .modal-wrapper{
-	transform: translate( -50%, -50%) scale(1);
-	opacity: 1;
+	transform: translate( -50%, -50%) scale(.4);		
 }
 
 .modal-btn{
@@ -438,13 +432,13 @@ a {
 	height: 44px;
 	background-color: #fff;
 	border-radius: 50%;
-	transition: color var(--slow-anim);
+	transition: background-color var(--slow-anim);
 }
 
 .social-icon:hover,
 .social-icon:focus{
 	fill: #fff;
-	background-color: var(--active-color);
+	background-color: var(--active-color);	
 }
 
 /* 
@@ -472,7 +466,7 @@ a {
 .partners-item {
 	display: flex;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
 }
 
 .partners-logo {
@@ -484,7 +478,7 @@ a {
 	border: 1px solid var(--icons);
 	border-radius: 4px;
 	fill: var(--icons);
-	transition: color var(--slow-anim);
+	transition: fill var(--slow-anim), border var(--slow-anim);
 }
 
 .partners-logo:hover,
@@ -624,7 +618,7 @@ address ul li a:focus {
 	font-family: "Roboto", sans-serif;
 	letter-spacing: 0.03em;
 	font-weight: 500;
-	transition: var(--slow-anim);
+	transition: background-color var(--slow-anim), color var(--slow-anim), box-shadow var(--slow-anim);
 }
 
 .btn:last-child {
@@ -662,11 +656,12 @@ address ul li a:focus {
 	line-height: 2;
 }
 
-.card{
-	transition: box-shadow var(--slow-anim);
+.card-item{
+	display: block;	
+	transition: box-shadow var(--slow-anim);	
 }
 
-.card:hover, .card:focus{
+.card-item:hover, .card-item:focus{	
 	box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
@@ -717,3 +712,4 @@ address ul li a:focus {
 	bottom: 0;
 	box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
+
